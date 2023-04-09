@@ -50,12 +50,13 @@ def get_remaining_lifespan(date_of_birth, life_expectancy):
     today = date.today()
     date_of_death = date_of_birth + relativedelta(years=life_expectancy)
     remaining_timedelta = date_of_death - today
-    remaining = {}
-    remaining["days"] = remaining_timedelta.days
-    remaining["weeks"] = round(remaining_timedelta.days / 7)
-    remaining["years"] = round(
-        remaining_timedelta.total_seconds() / (365.2425 * 24 * 3600)
-    )
+    remaining = {
+        "days": remaining_timedelta.days,
+        "weeks": round(remaining_timedelta.days / 7),
+        "years": round(
+            remaining_timedelta.total_seconds() / (365.2425 * 24 * 3600)
+        ),
+    }
     return remaining
 
 
