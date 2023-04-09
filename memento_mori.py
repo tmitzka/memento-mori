@@ -45,7 +45,7 @@ def get_age(date_of_birth):
 def get_remaining_lifespan(date_of_birth, life_expectancy):
     """Calculate the user's approximate remaining lifespan.
 
-    Return the number of days, weeks, and years.
+    Return a dictionary including the number of days, weeks, and years.
     """
     today = date.today()
     date_of_death = date_of_birth + relativedelta(years=life_expectancy)
