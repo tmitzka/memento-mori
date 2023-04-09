@@ -23,4 +23,5 @@ lives. You can find more information about "Memento mori" on
 
 > It is not death that a man should fear, but rather he should fear never
 > beginning to live.
+
 — Marcus Aurelius, Roman emperor and Stoic philosopher
