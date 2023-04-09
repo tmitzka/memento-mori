@@ -92,7 +92,8 @@ def get_days_until_birthday(date_of_birth):
     return birthday_timedelta.days
 
 
-if __name__ == "__main__":
+def main():
+    """Call functions and display information."""
     print("=== MEMENTO MORI ===")
 
     date_of_birth = get_date_of_birth()
@@ -119,3 +120,7 @@ if __name__ == "__main__":
         print("How will you spend them?")
     print("\n💀 Memento mori - remember that you will die.")
     print("✨ But even more important: remember to LIVE!")
+
+
+if __name__ == "__main__":
+    main()
