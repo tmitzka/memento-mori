@@ -9,7 +9,7 @@ constant *LIFE_EXPECTANCY*.
 ## Dependencies
 
 The program requires Python 3.6 and the module *python-dateutil*, which is not
-included in the standard library and can be installed using pip:
+included in the standard library and can be installed using *pip*:
 `pip install python-dateutil`
 
 ## About Memento mori
@@ -25,4 +25,4 @@ lives. You can find more information about "Memento mori" on
 > It is not death that a man should fear, but rather he should fear never
 > beginning to live.
 
-— Marcus Aurelius, Roman emperor and Stoic philosopher
+*— Marcus Aurelius, Roman emperor and Stoic philosopher*
