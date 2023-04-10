@@ -8,8 +8,9 @@ constant *LIFE_EXPECTANCY*.
 
 ## Dependencies
 
-The program requires *Python 3.6+* and the module *dateutil*, which is not 
-included in the Python standard library and can be installed using *pip*.
+The program requires Python 3.6 and the module *python-dateutil*, which is not
+included in the standard library and can be installed using pip:
+`pip install python-dateutil`
 
 ## About Memento mori
 
