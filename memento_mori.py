@@ -12,7 +12,7 @@ from dateutil.relativedelta import relativedelta
 LIFE_EXPECTANCY = 80
 
 
-def get_date_of_birth():
+def get_date_of_birth() -> datetime.date:
     """Return the user's date of birth."""
     while True:
         user_input = input("\nWhen were you born? (YYYY-MM-DD) ")
@@ -30,7 +30,7 @@ def get_date_of_birth():
             return date_of_birth
 
 
-def get_age(date_of_birth):
+def get_age(date_of_birth) -> int:
     """Calculate and return the user's age in years."""
     today = date.today()
     age_timedelta = today - date_of_birth
@@ -42,10 +42,10 @@ def get_age(date_of_birth):
     return age
 
 
-def get_remaining_lifespan(date_of_birth, life_expectancy):
+def get_remaining_lifespan(date_of_birth, life_expectancy) -> dict:
     """Calculate the user's approximate remaining lifespan.
 
-    Return a dictionary including the number of days, weeks, and years.
+    Return the number of days, weeks, and years.
     """
     today = date.today()
     date_of_death = date_of_birth + relativedelta(years=life_expectancy)
@@ -60,7 +60,7 @@ def get_remaining_lifespan(date_of_birth, life_expectancy):
     return remaining
 
 
-def get_days_until_birthday(date_of_birth):
+def get_days_until_birthday(date_of_birth) -> int:
     """Return the number of days until the user's next birthday."""
     # First, find out the user's next birthday.
     today = date.today()
