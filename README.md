@@ -12,6 +12,12 @@ The program requires Python 3.6 and the module *dateutil*, which is not
 included in the standard library and can be installed using *pip*:
 `pip install python-dateutil`
 
+## Web app
+
+Using *Streamlit*, I created a web app based on this program. [Try it
+here](https://memento-mori.streamlit.app/) or take a look at the
+[repository](https://github.com/tmitzka2/memento-mori).
+
 ## About Memento mori
 
 *Memento mori* is a Latin phrase that translates to "remember that you will
