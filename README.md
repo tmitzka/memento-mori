@@ -8,7 +8,7 @@ constant *LIFE_EXPECTANCY*.
 
 ## Dependencies
 
-The program requires Python 3.6 and the module *dateutil*, which is not
+The program requires Python 3.6+ and the module *dateutil*, which is not
 included in the standard library and can be installed using *pip*:
 `pip install python-dateutil`
 
