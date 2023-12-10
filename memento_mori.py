@@ -12,17 +12,14 @@ from dateutil.relativedelta import relativedelta
 LIFE_EXPECTANCY = 80
 
 
-def get_date_of_birth() -> datetime.date:
+def get_date_of_birth() -> date:
     """Return the user's date of birth."""
     while True:
         user_input = input("\nWhen were you born? (YYYY-MM-DD) ")
         try:
             date_of_birth = datetime.strptime(user_input, "%Y-%m-%d").date()
             if date_of_birth > date.today():
-                print(
-                    "Are you a time traveller? "
-                    "Please enter a date in the past."
-                )
+                print("Are you a time traveller? Please enter a date in the past.")
                 continue
         except ValueError:
             print("Please enter a real date in the format YYYY-MM-DD.")
@@ -30,19 +27,20 @@ def get_date_of_birth() -> datetime.date:
             return date_of_birth
 
 
-def get_age(date_of_birth) -> int:
+def get_age(date_of_birth: date) -> int:
     """Calculate and return the user's age in years."""
     today = date.today()
     age_timedelta = today - date_of_birth
     age = int(
         # 3,600 seconds per hour, 24 hours per day,
         # 365 days per year (accounting for leap years).
-        age_timedelta.total_seconds() / (365.2425 * 24 * 3600)
+        age_timedelta.total_seconds()
+        / (365.2425 * 24 * 3600)
     )
     return age
 
 
-def get_remaining_lifespan(date_of_birth, life_expectancy) -> dict:
+def get_remaining_lifespan(date_of_birth: date, life_expectancy: int) -> dict:
     """Calculate the user's approximate remaining lifespan.
 
     Return the number of days, weeks, and years.
@@ -53,14 +51,12 @@ def get_remaining_lifespan(date_of_birth, life_expectancy) -> dict:
     remaining = {
         "days": remaining_timedelta.days,
         "weeks": round(remaining_timedelta.days / 7),
-        "years": round(
-            remaining_timedelta.total_seconds() / (365.2425 * 24 * 3600)
-        ),
+        "years": round(remaining_timedelta.total_seconds() / (365.2425 * 24 * 3600)),
     }
     return remaining
 
 
-def get_days_until_birthday(date_of_birth) -> int:
+def get_days_until_birthday(date_of_birth: date) -> int:
     """Return the number of days until the user's next birthday."""
     # First, find out the user's next birthday.
     today = date.today()
@@ -116,7 +112,8 @@ def main():
         print(
             f"\n{remaining['years']} years. "
             f"That is {remaining['weeks']:,} weeks, "
-            f"or {remaining['days']:,} days.")
+            f"or {remaining['days']:,} days."
+        )
         print("How will you spend them?")
     print("\n💀 Memento mori - remember that you will die.")
     print("✨ But even more important: remember to LIVE!")
